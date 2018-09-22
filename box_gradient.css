@@ -1,0 +1,49 @@
+body{
+    background-image: url('wesson-wang-110739-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat; 
+    margin: 0;
+    padding: 0;
+
+}
+.text-box{
+    margin: auto;
+    padding: 10px;
+}
+.grad-shadow{
+    position: relative;
+    margin: 200px auto 0;
+    width: 400px;
+    height: 250px;
+    background: linear-gradient(0deg, #000, #262626);
+    color:#fff;
+    display: flex;
+}
+.grad-shadow::before, .grad-shadow::after{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000 );
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height:calc(100% + 4px); 
+    z-index: -1;   
+    animation: animate 25s linear infinite;
+}
+.grad-shadow::after{
+    filter: blur(10px);
+}
+
+@keyframes animate{
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 300% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
